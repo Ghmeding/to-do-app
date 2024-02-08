@@ -1,11 +1,11 @@
 import React from 'react';
-import './TickIcon.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
+
 
 export const TickIcon = () => {
   return (
-    <div className="TickIcon">
-      hey bro
-    </div>
+    <FontAwesomeIcon icon={ faCheckCircle } className='tick'/>
   );
 }
 

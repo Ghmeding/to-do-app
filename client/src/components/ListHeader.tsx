@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from './Modal';
 
 interface ListProps {
   name: string;
@@ -18,6 +19,7 @@ export const ListHeader = ( props: ListProps ) => {
         <button className={"create"}>ADD NEW</button>
         <button className={"signout"} onClick={signOut}>SIGN OUT</button>
       </div>
+      <Modal/>
     </div>
   );
 }

@@ -1,11 +1,29 @@
 import React from 'react';
-import './ListItem.css';
+import TickIcon from './TickIcon';
+import Progress from './Progress';
 
-export const ListItem = () => {
+
+export interface Task {
+  date: string;
+  id?: string;
+  progress?: number;
+  title?: string;
+  user_email?: string;
+}
+
+export const ListItem = ( task: Task ) => {
   return (
-    <div className="ListItem">
-      hey bro
-    </div>
+    <li className="list-item">
+      <div className='info-container'>
+        <TickIcon/>
+        <p className='task-title'>{task.title}</p>
+        <Progress/>
+      </div>
+      <div className='button-container'>
+        <button className='edit'>EDIT</button>
+        <button className='delete'>DELETE</button>
+      </div>
+    </li>
   );
 }
 
