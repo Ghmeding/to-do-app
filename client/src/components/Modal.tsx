@@ -11,9 +11,10 @@ export const Modal = () => {
   return (
     <div className="overlay">
       <div className='modal'>
-        <div className='form'>
+        <div className='form-title-container'>
           <h3>Let's {mode} your task</h3>
           <button>X</button>
+        </div>
 
           <form>
             <input
@@ -38,7 +39,6 @@ export const Modal = () => {
           </form>
         </div>
       </div>
-    </div>
   );
 }
 
